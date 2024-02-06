@@ -106,7 +106,6 @@ header ul {
 }
 
 header ul li {
-    border: 5px solid yellow;
     display: inline-block;
     margin: 0 15px;
 }
@@ -116,9 +115,16 @@ header ul li {
 }
 
 header ul li a {
-    border: 5px solid deepskyblue;
     padding: 5px 10px;
     display: inline-block;
+    font-family: "Changa One", sans-serif;
+    font-weight: 400;
+    color: #fdfffc;
+}
+
+header ul li a:hover,
+header ul li a.actif {
+    color: #2ec4b6;
 }
 
 .personne {
