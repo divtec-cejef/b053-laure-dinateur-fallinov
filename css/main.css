@@ -92,6 +92,7 @@ a:hover {
     /*border-bottom: 2px solid #e71d36;*/
     text-shadow: 1px 1px 2px rgba(0,0,0,.5);
 }
+
 /*************************************
             ENTÊTE DU SITE
  ************************************/
@@ -127,7 +128,7 @@ header ul li a.actif {
     color: #2ec4b6;
 }
 
-.personne {
+header .personne {
     font-size: 1.75rem;
     line-height: 0.8;
     color: #2ec4b6;
@@ -136,8 +137,48 @@ header ul li a.actif {
     margin: 1rem 0;
 }
 
-.metier {
+header .metier {
     margin-top: -5px;
+}
+
+/*************************************
+            FOOTER
+ ************************************/
+
+footer {
+    text-align: center;
+    padding: 50px 0 0; /* 50px en haut */
+}
+
+footer nav {
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+footer ul li img {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
+
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+
+    -webkit-transition: -webkit-filter 500ms linear;
+    transition: filter 500ms linear;
+}
+
+footer ul li img:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
 }
 
 /*************************************
