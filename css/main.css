@@ -212,14 +212,6 @@ footer ul li img:hover {
     padding: 1rem 2.5%;
 }
 
-/* Pour les écrans de 660px on affiche sur 3 colonnes */
-@media screen and (min-width: 660px) {
-    .page-accueil ul.realisations li {
-        flex-basis: 33%;
-        flex-grow: 3;
-    }
-}/* fin min-width: 660px */
-
 /* Supprimer les marges par défaut des figures */
 figure {
     margin: 0;

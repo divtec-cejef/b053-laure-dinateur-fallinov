@@ -1,0 +1,67 @@
+/* Pour les écrans de 480px on affiche sur 3 colonnes */
+@media screen and (min-width: 480px) {
+    .page-accueil ul.realisations li {
+        flex-basis: 33%;
+        flex-grow: 3;
+    }
+
+    .page-infos .profile-photo {
+        float: left;
+        margin: 0 1em 1em 0;
+    }
+
+    .page-contact .container {
+        display: flex;
+    }
+
+    .page-contact section.infos {
+        width: 50%;
+    }
+
+    .page-contact section.contact {
+        width: 40%;
+        padding-left: 10%;
+    }
+}/* fin min-width: 480 */
+
+/* Pour les écrans de 660 */
+@media screen and (min-width: 705px) {
+    header {
+        border-bottom: 5px solid #2ec4b6;
+        display: flex;
+        gap: 10%;
+    }
+
+    header > a {
+        width: 42%;
+        text-align: left;
+    }
+
+    header .personne {
+        font-size: 2.5rem;
+    }
+
+    header .metier {
+        margin-bottom: 20px;
+    }
+
+    header nav {
+        width: 48%;
+        font-size: 1.125rem;
+    }
+}
+
+/* Pour les écrans de 910px */
+@media screen and (min-width: 910px) {
+    main,
+    footer {
+        max-width: 910px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .accueil {
+        display: inline-block;
+    }
+}/* fin min-width: 910 */
+
