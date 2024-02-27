@@ -193,8 +193,36 @@ footer ul li img:hover {
 /*************************************
             PAGE ACCUEIL
  ************************************/
-.page-accueil h1 {
-    color: yellow;
+
+/* Container FLEX */
+.page-accueil ul.realisations {
+    /* Reset style de la liste ul */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Flex */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* Les éléments FLEX */
+.page-accueil ul.realisations li {
+    flex-basis: 50%;
+    flex-grow: 2;
+    padding: 1rem 2.5%;
+}
+
+/* Pour les écrans de 660px on affiche sur 3 colonnes */
+@media screen and (min-width: 660px) {
+    .page-accueil ul.realisations li {
+        flex-basis: 33%;
+        flex-grow: 3;
+    }
+}/* fin min-width: 660px */
+
+/* Supprimer les marges par défaut des figures */
+figure {
+    margin: 0;
 }
 
 /*************************************
