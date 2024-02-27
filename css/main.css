@@ -108,10 +108,9 @@ header ul {
 
 header ul li {
     display: inline-block;
-    margin: 0 15px;
 }
 
-.accueil {
+header .accueil {
     display: none;
 }
 
@@ -143,12 +142,9 @@ header .metier {
 /*************************************
             MAIN
  ************************************/
-
 main {
     margin: 20px 5%;
 }
-
-
 
 /*************************************
             FOOTER
@@ -194,64 +190,122 @@ footer ul li img:hover {
             PAGE ACCUEIL
  ************************************/
 .page-accueil h1 {
-    color: yellow;
+    text-align: center;
+}
+
+.page-accueil .realisations {
+    /* Reset style liste */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Affichage FLEX */
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Eléments du container FLEX */
+.page-accueil .realisations li {
+    flex: 0 1 50%; /* [min] [max] [taille idéale] */
+    padding: 1rem 2.5%;
+}
+/* Suppression des mages des figures */
+.page-accueil .realisations figure {
+    margin: 0;
+    color: #011627;
+    background-color: #e7e9eb ;
+    transition: all 0.2s ease-in-out;
+}
+
+.page-accueil .realisations figure:hover {
+    transform: rotate(30deg) scale(1.1);
+}
+
+.page-accueil .realisations figcaption {
+    padding: 10px;
+    font-size: 1rem;
 }
 
 /*************************************
             PAGE CONTACT
  ************************************/
-.page-contact .contact-info {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 0 10px;
-}
 
-.page-contact .contact-info li {
-    margin-bottom: .5em;
-}
-
-.page-contact .contact-info li a {
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    background-position: 0 2px;
-
-    padding: 0 0 0 30px;
-}
-
-/*
-Sélecteur d'attribut CSS
-http://www.w3schools.com/css/css_attribute_selectors.asp
-    - commence par   ^=
-    - contient       *=
-    - se termine par $=
-*/
-
-.page-contact .contact-info li a[href^="tel"] {
-    background-image: url('../img/phone.png');
-}
-
-.page-contact .contact-info li a[href^="mailto"] {
-    background-image: url('../img/mail.png');
-}
-
-.page-contact .contact-info li a[href*="twitter"] {
-    background-image: url('../img/twitter.png');
-}
-
-.page-contact .contact-info li a[href*="facebook"] {
-    background-image: url('../img/facebook.png');
-}
 
 /*************************************
             PAGE INFO
  ************************************/
 .page-infos .profile-photo {
-    display: block;
-    max-width: 150px;
-    margin: 0 auto 30px;
+    max-width: 200px;
     border-radius: 50%;
 }
 
-.page-infos h1 {
-    text-align: center;
+/*************************************
+            MEDIA QUERIES
+ ************************************/
+
+/* Pour les écrans de minimum 480px de large */
+@media screen and (min-width: 480px) {
+    .page-accueil .realisations li {
+        flex: 0 1 33%;
+    }
+
+    .page-infos .profile-photo {
+        float: left;
+        margin-right: 2rem;
+        margin-bottom: 200px;
+    }
+
+    .page-contact .container {
+        display: flex;
+    }
+
+    .page-contact section.general {
+        width: 50%;
+    }
+
+    .page-contact section.contact {
+        width: 40%;
+        margin-left: 10%;
+    }
+}
+
+/* Pour les écrans de minimum 660px de large */
+@media screen and (min-width: 660px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 5px solid #2ec4b6;
+    }
+
+    /* Le lien qui est fils de header et donc pas les petits-fils*/
+    header > a {
+        width: 42%;
+        text-align: left;
+    }
+
+    header .personne {
+        font-size: 2.3rem;
+    }
+
+    header .metier {
+        margin-bottom: 20px;
+    }
+
+    header nav {
+        width: 48%;
+        font-size: 1.25em;
+    }
+}
+
+/* Pour les écrans de minimum 910px de large */
+@media screen and (min-width: 910px) {
+    header .accueil {
+        display: inline-block;
+    }
+
+    main,
+    footer {
+        max-width: 910px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
